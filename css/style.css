@@ -524,7 +524,7 @@ footer > p:last-child {
         word-break: break-word;
     }
 }
-@media (max-width: 480px) {
+@media (max-width: 600px) {
     header {
         padding: 8px;
     }
@@ -543,6 +543,7 @@ footer > p:last-child {
     }
 
     nav li a {
+        font-weight: bold;
         font-size: 12px;
         padding: 4px 2px;
         white-space: nowrap;
