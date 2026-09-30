@@ -56,7 +56,6 @@ nav li a {
     padding-bottom: 4px;
     border-bottom: 2px solid transparent;
     transition: border-color 0.2s ease;
-    font-size: 20;
 }
 
 nav li a:hover {
@@ -377,75 +376,201 @@ footer > p:last-child {
 }
 
 @media (max-width: 768px) {
+    html {
+        -webkit-text-size-adjust: 100%;
+        text-size-adjust: 100%;
+    }
+
+    html,
+    body {
+        overflow-x: hidden;
+    }
+
+    body {
+        font-size: 18px;
+        overflow-wrap: break-word;
+    }
+
     header {
         flex-direction: column;
-        gap: 6px;
-        padding: 10px 1rem;
+        gap: 8px;
+        padding: 14px 1rem;
         position: static;
     }
 
     header h1 {
-        font-size: 22px;
+        font-size: 28px;
         margin: 6px 0;
     }
 
     nav ul {
         flex-wrap: wrap;
         justify-content: center;
-        gap: 14px 22px;
+        gap: 12px 24px;
         padding: 0;
     }
 
-    main,
-    footer {
-        margin-left: 6px;
-        margin-right: 6px;
+    nav li a {
+        font-size: 12px;
+        padding: 6px 2px;
+    }
+
+    main {
+        margin: 0 8px;
         border-radius: 24px 24px 0 0;
     }
 
     footer {
+        margin: 0 8px 8px;
         border-radius: 0 0 24px 24px;
     }
 
     .hero {
-        padding: 20px;
+        padding: 20px 14px;
+        border-radius: 24px 24px 0 0;
     }
 
     .hero h1 {
-        padding-top: 120px;
-        font-size: 26px;
+        padding-top: 80px;
+        font-size: 34px;
+        line-height: 1.25;
     }
 
     .hero p {
-        font-size: 18px;
-        padding-bottom: 140px;
+        font-size: 22px;
+        padding-bottom: 100px;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    .about {
+        padding: 0 12px;
     }
 
     .about p {
         max-width: 100%;
+        margin: 20px 0;
         padding: 20px;
+        font-size: 19px;
+        box-sizing: border-box;
     }
 
     .skills ul,
     .projects ul {
         grid-template-columns: 1fr;
-        padding: 25px 15px;
+        padding: 20px 14px;
+        gap: 14px;
+    }
+
+    .skills li {
+        padding: 24px;
+        font-size: 21px;
     }
 
     .experience-item {
-        margin: 20px 12px;
+        margin: 16px 10px;
         padding: 20px;
     }
 
     .experience-item h3 {
-        font-size: 20px;
+        font-size: 24px;
+    }
+
+    .experience-item h4 {
+        font-size: 19px;
+    }
+
+    .linkedin-link {
+        font-size: 26px;
     }
 
     .experience li {
+        font-size: 18px;
+        margin-left: -30px;
+        line-height: 1.6;
+    }
+
+    .projects li {
+        padding: 22px;
+    }
+
+    .projects h3 {
+        font-size: 22px;
+    }
+
+    .projects p {
+        font-size: 18px;
+    }
+
+    footer > p {
+        font-size: 18px;
+    }
+
+    .contact-links {
+        max-width: 100%;
+        padding: 22px 14px;
+        box-sizing: border-box;
+    }
+
+    .contact-links h4 {
+        font-size: 18px;
+    }
+
+    .contact-links a {
+        font-size: 17px;
+        word-break: break-word;
+    }
+}
+@media (max-width: 480px) {
+    header {
+        padding: 8px;
+    }
+
+    header h1 {
+        font-size: 18px;
+    }
+
+    nav ul {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        gap: 2px;
+        padding: 0;
+        margin: 0;
+    }
+
+    nav li a {
+        font-size: 12px;
+        padding: 4px 2px;
+        white-space: nowrap;
+        
+    }
+
+    .hero h1 {
+        padding-top: 60px;
+        font-size: 30px;
+    }
+
+    .hero p {
+        font-size: 20px;
+        padding-bottom: 80px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    .experience-item {
+        margin: 12px 6px;
+        padding: 16px;
+    }
+
+    .contact-links a {
         font-size: 16px;
     }
 }
-
 /* ===== Accessibility ===== */
 @media (prefers-reduced-motion: reduce) {
     html {
@@ -458,3 +583,27 @@ footer > p:last-child {
         transition: none !important;
     }
 }
+/* hidden on desktop */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: rgb(178, 201, 206);
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+/* turns into an X when open */
+.menu-toggle.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.menu-toggle.active span:nth-child(2) { opacity: 0; }
+.menu-toggle.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
