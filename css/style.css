@@ -530,7 +530,12 @@ footer > p:last-child {
     }
 
     header h1 {
+        margin-top:22px ;
         font-size: 18px;
+        
+        border-bottom: 2px solid rgba(178, 201, 206, 0.05);
+      
+        
     }
 
     nav ul {
