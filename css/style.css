@@ -1,0 +1,460 @@
+/* ===== Base ===== */
+* {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px; /* keeps section titles clear of the sticky header */
+}
+
+body {
+    background-color: rgb(10, 2, 32);
+    color: rgb(178, 201, 206);
+    text-align: center;
+    margin: 0;
+}
+
+a:focus-visible {
+    outline: 2px solid rgb(178, 201, 206);
+    outline-offset: 4px;
+    border-radius: 4px;
+}
+
+/* ===== Header / Nav ===== */
+header {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 7px 2rem;
+    background-color: rgb(10, 2, 32);
+    border-bottom: 1px solid #10222b;
+    width: 100%;
+    margin-bottom: 0;
+}
+
+header h1 {
+    color: rgb(178, 201, 206);
+    font-size: 29px;
+}
+
+nav ul {
+    display: flex;
+    gap: 70px;
+    list-style: none;
+    margin: 0;
+    padding-right: 10px;
+}
+
+nav li a {
+    text-decoration: none;
+    color: rgb(178, 201, 206);
+    padding-bottom: 4px;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.2s ease;
+    font-size: 20;
+}
+
+nav li a:hover {
+    border-bottom-color: rgb(178, 201, 206);
+}
+
+/* ===== Main frame ===== */
+main {
+    border: 2px solid rgb(178, 201, 206);
+    border-bottom: none;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    margin: 0 10px;
+}
+
+/* ===== Hero ===== */
+.hero {
+    position: relative;
+    background-color: rgb(10, 2, 32);
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    color: rgb(178, 201, 206);
+    text-align: center;
+    padding: 40px;
+    margin-top: 10px;
+}
+
+.hero h1 {
+    padding-top: 250px;
+}
+
+.hero p {
+    font-size: 25px;
+    padding-bottom: 310px;
+    min-height: 1.4em;
+}
+
+.hero p span {
+    display: block;
+}
+
+/* blinking cursor after the typing text */
+#typing::after {
+    content: "|";
+    margin-left: 4px;
+    animation: blink 1s steps(1) infinite;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
+.hero a {
+    font-size: 25px;
+    color: rgb(178, 201, 206);
+    display: block;
+    text-decoration: none;
+    padding-bottom: 299px;
+}
+
+/* ===== Education ===== */
+.about {
+    background-color: rgb(10, 2, 32);
+    max-width: 100%;
+    margin: 0 auto;
+    color: rgb(178, 201, 206);
+    border-top: 2px solid rgb(178, 201, 206);
+    padding: 0 20px;
+}
+
+.about h2 {
+    padding-top: 0;
+}
+
+.about div {
+    padding-top: 10px;
+    padding-bottom: 30px;
+}
+
+.about p {
+    max-width: 60%;
+    margin: 40px auto;
+    color: rgb(178, 201, 206);
+    font-size: 18px;
+    line-height: 1.8;
+    text-align: center;
+    padding: 25px 30px;
+    background-color: rgba(178, 201, 206, 0.05);
+    border-radius: 8px;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.about p:hover {
+    transform: translateY(-2px);
+    background-color: rgba(178, 201, 206, 0.12);
+}
+
+/* ===== Skills ===== */
+.skills {
+    background-color: rgb(10, 2, 32);
+    margin-top: -13px;
+    border-top: 2px solid rgb(178, 201, 206);
+}
+
+.skills ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 50px;
+    margin: 0;
+}
+
+.skills li {
+    min-height: 20px;
+    border-radius: 8px;
+    color: rgb(178, 201, 206);
+    font-size: 18px;
+    text-align: center;
+    padding: 30px;
+    background-color: rgba(178, 201, 206, 0.05);
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.skills li:hover {
+    transform: translateY(-4px);
+    background-color: rgba(178, 201, 206, 0.12);
+}
+
+/* ===== Experience ===== */
+.experience {
+    background-color: rgb(10, 2, 32);
+    margin-top: -13px;
+    border-top: 2px solid rgb(178, 201, 206);
+    padding-bottom: 30px;
+}
+
+.experience h2 {
+    margin: 0;
+    padding: 30px 20px 10px;
+    color: rgb(178, 201, 206);
+}
+
+.experience-item {
+    max-width: 850px;
+    margin: 20px auto;
+    padding: 30px;
+    background-color: rgba(178, 201, 206, 0.05);
+    border-radius: 8px;
+    text-align: left;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.experience-item:hover {
+    transform: translateY(-4px);
+    background-color: rgba(178, 201, 206, 0.12);
+}
+
+.experience-item h3 {
+    display: inline;
+    margin: 0 0 8px;
+    color: rgb(178, 201, 206);
+    font-size: 24px;
+}
+
+.experience-item h4 {
+    margin: 0 0 20px;
+    color: rgb(178, 201, 206);
+    font-size: 17px;
+    opacity: 0.8;
+}
+
+.linkedin-link {
+    display: inline;
+    font-size: 22px;
+    margin-left: 10px;
+    color: rgb(178, 201, 206);
+    text-decoration: none;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.linkedin-link:hover {
+    color: #5aa9e6;
+    transform: scale(1.15);
+}
+
+.experience ul {
+    list-style: inside;
+    text-align: left;
+}
+
+.experience li {
+    font-size: 20px;
+    margin-left: -37px;
+    padding: 5px;
+}
+
+/* ===== Projects ===== */
+.projects {
+    background-color: rgb(10, 2, 32);
+    border-top: 2px solid rgb(178, 201, 206);
+    padding-bottom: 30px;
+}
+
+.projects h2 {
+    margin: 0;
+    padding: 30px 20px 10px;
+    color: rgb(178, 201, 206);
+}
+
+.projects ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 40px 50px;
+    margin: 0;
+    list-style: none;
+}
+
+.projects li {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 30px;
+    border-radius: 8px;
+    background-color: rgba(178, 201, 206, 0.05);
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.projects li:hover {
+    transform: translateY(-4px);
+    background-color: rgba(178, 201, 206, 0.12);
+}
+
+.projects h3 {
+    margin: 0 0 12px;
+    font-size: 20px;
+    color: rgb(178, 201, 206);
+}
+
+.projects p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.7;
+    opacity: 0.85;
+}
+
+/* ===== Footer / Contact ===== */
+footer {
+    background-color: rgb(10, 2, 32);
+    border: 2px solid rgb(178, 201, 206);
+    border-top: 2px solid rgb(178, 201, 206);
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    margin: 0 10px 10px;
+    padding: 40px 20px 20px;
+    color: rgb(178, 201, 206);
+}
+
+footer h2 {
+    margin: 0 0 10px;
+}
+
+footer > p {
+    margin: 0 0 25px;
+    opacity: 0.85;
+}
+
+.contact-links {
+    max-width: 500px;
+    margin: 0 auto 30px;
+    padding: 25px 30px;
+    background-color: rgba(178, 201, 206, 0.05);
+    border-radius: 8px;
+}
+
+.contact-links h4 {
+    margin: 18px 0 6px;
+    font-size: 15px;
+    opacity: 0.7;
+}
+
+.contact-links h4:first-child {
+    margin-top: 0;
+}
+
+.contact-links a {
+    color: rgb(178, 201, 206);
+    text-decoration: none;
+    font-size: 17px;
+    border-bottom: 1px dashed rgba(178, 201, 206, 0.5);
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.contact-links a:hover {
+    border-bottom-color: rgb(178, 201, 206);
+    background-color: rgba(178, 201, 206, 0.12);
+}
+
+footer > p:last-child {
+    font-size: 14px;
+    opacity: 0.6;
+    margin: 0;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 1000px) {
+    nav ul {
+        gap: 30px;
+    }
+
+    .projects ul {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 6px;
+        padding: 10px 1rem;
+        position: static;
+    }
+
+    header h1 {
+        font-size: 22px;
+        margin: 6px 0;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 14px 22px;
+        padding: 0;
+    }
+
+    main,
+    footer {
+        margin-left: 6px;
+        margin-right: 6px;
+        border-radius: 24px 24px 0 0;
+    }
+
+    footer {
+        border-radius: 0 0 24px 24px;
+    }
+
+    .hero {
+        padding: 20px;
+    }
+
+    .hero h1 {
+        padding-top: 120px;
+        font-size: 26px;
+    }
+
+    .hero p {
+        font-size: 18px;
+        padding-bottom: 140px;
+    }
+
+    .about p {
+        max-width: 100%;
+        padding: 20px;
+    }
+
+    .skills ul,
+    .projects ul {
+        grid-template-columns: 1fr;
+        padding: 25px 15px;
+    }
+
+    .experience-item {
+        margin: 20px 12px;
+        padding: 20px;
+    }
+
+    .experience-item h3 {
+        font-size: 20px;
+    }
+
+    .experience li {
+        font-size: 16px;
+    }
+}
+
+/* ===== Accessibility ===== */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::after {
+        animation: none !important;
+        transition: none !important;
+    }
+}
